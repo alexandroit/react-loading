@@ -1,6 +1,6 @@
 {
   "name": "@revivejs/react-loading",
-  "version": "19.0.0",
+  "version": "19.0.1",
   "description": "Versioned React wrapper components, overlay helpers, and imperative hooks for @revivejs/loading.",
   "keywords": [
     "react",
