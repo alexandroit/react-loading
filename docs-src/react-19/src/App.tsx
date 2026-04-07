@@ -26,6 +26,47 @@ function stamp(message: string) {
   return `${new Date().toLocaleTimeString('en-US', { hour12: false })}  ${message}`;
 }
 
+function CopyableCodeBlock({ code, compact = false }: { code: string; compact?: boolean }) {
+  const [label, setLabel] = useState('Copy');
+
+  async function copyCode() {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(code);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = code;
+        textarea.setAttribute('readonly', 'true');
+        textarea.style.position = 'absolute';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+
+      setLabel('Copied');
+    } catch (error) {
+      setLabel('Copy failed');
+    }
+
+    window.setTimeout(() => {
+      setLabel('Copy');
+    }, 1200);
+  }
+
+  return (
+    <div className={`code-block-shell ${compact ? 'is-compact' : ''}`}>
+      <div className="code-block-head">
+        <button type="button" className="ghost-button copy-button" onClick={copyCode}>
+          {label}
+        </button>
+      </div>
+      <pre className={`code-block ${compact ? 'compact' : ''}`}>{code}</pre>
+    </div>
+  );
+}
+
 function DemoSection({ title, description, code, children }: DemoSectionProps) {
   return (
     <section className="demo-card">
@@ -35,7 +76,7 @@ function DemoSection({ title, description, code, children }: DemoSectionProps) {
           <p>{description}</p>
         </div>
       </div>
-      {code ? <pre className="code-block">{code}</pre> : null}
+      {code ? <CopyableCodeBlock code={code} /> : null}
       {children}
     </section>
   );
@@ -124,21 +165,21 @@ export function App({ reactLine }: AppProps) {
             <span>1</span>
             <div>
               <strong>Install the wrapper</strong>
-              <pre className="code-block compact">{INSTALL_CODE}</pre>
+              <CopyableCodeBlock code={INSTALL_CODE} compact />
             </div>
           </div>
           <div className="step">
             <span>2</span>
             <div>
               <strong>Render a component or wrap a surface</strong>
-              <pre className="code-block compact">{`<Loading visible options={{ variant: 'orbit' }} />`}</pre>
+              <CopyableCodeBlock code={`<Loading visible options={{ variant: 'orbit' }} />`} compact />
             </div>
           </div>
           <div className="step">
             <span>3</span>
             <div>
               <strong>Use a hook for fullscreen workflows</strong>
-              <pre className="code-block compact">{`const loading = useLoadingController();`}</pre>
+              <CopyableCodeBlock code={`const loading = useLoadingController();`} compact />
             </div>
           </div>
         </section>
