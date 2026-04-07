@@ -1,0 +1,101 @@
+{
+  "name": "@revivejs/react-loading",
+  "version": "19.0.0",
+  "description": "Versioned React wrapper components, overlay helpers, and imperative hooks for @revivejs/loading.",
+  "keywords": [
+    "react",
+    "react 17",
+    "react 18",
+    "react 19",
+    "react loading",
+    "react loading state",
+    "react loading spinner",
+    "react loader",
+    "react loading overlay",
+    "react fullscreen loader",
+    "react button loader",
+    "react inline loader",
+    "react suspense alternative",
+    "react dashboard loading",
+    "react table loading",
+    "react modal loading",
+    "react upload loading",
+    "react accessibility",
+    "react aria-live",
+    "react component",
+    "react hook",
+    "react ui library",
+    "loading",
+    "loader",
+    "loading-state",
+    "loading-indicator",
+    "spinner",
+    "overlay",
+    "fullscreen-loader",
+    "button-loader",
+    "inline-loader",
+    "progress-ui",
+    "tree-shakeable",
+    "typescript",
+    "revivejs"
+  ],
+  "homepage": "https://alexandroit.github.io/react-loading/",
+  "bugs": {
+    "url": "https://github.com/alexandroit/react-loading/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandroit/react-loading.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist docs/react-17 docs/react-18 docs/react-19",
+    "docs:install:react-17": "cd docs-src/react-17 && npm install",
+    "docs:install:react-18": "cd docs-src/react-18 && npm install",
+    "docs:install:react-19": "cd docs-src/react-19 && npm install",
+    "build:docs:react-17": "cd docs-src/react-17 && npm run build",
+    "build:docs:react-18": "cd docs-src/react-18 && npm run build",
+    "build:docs:react-19": "cd docs-src/react-19 && npm run build",
+    "docs:root": "node scripts/write-docs-root.js",
+    "build:docs": "npm run build:docs:react-17 && npm run build:docs:react-18 && npm run build:docs:react-19 && npm run docs:root",
+    "release:line": "node scripts/release-react-line.js",
+    "release:sequence": "node scripts/release-react-sequence.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0 <20.0.0",
+    "react-dom": ">=17.0.0 <20.0.0"
+  },
+  "dependencies": {
+    "@revivejs/loading": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3"
+  }
+}
