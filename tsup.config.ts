@@ -7,5 +7,5 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   target: 'es2020',
-  external: ['react', 'react-dom', '@revivejs/loading']
+  external: ['react', 'react-dom', '@stackline/loading']
 });

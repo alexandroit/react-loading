@@ -1,0 +1,15 @@
+{
+  "name": "@stackline/react-loading-docs-react17-17-0-0",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node ./stackline-validate.mjs"
+  },
+  "dependencies": {
+    "@stackline/loading": "file:../../../../../loading/loading",
+    "react": "17.0.0",
+    "react-dom": "17.0.0",
+    "@stackline/react-loading": "file:../../.."
+  },
+  "devDependencies": {}
+}

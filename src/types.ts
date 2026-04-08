@@ -1,5 +1,5 @@
 import type { HTMLAttributes, ReactNode } from 'react';
-import type { LoaderInstance, LoaderOptions, LoaderTarget } from '@revivejs/loading';
+import type { LoaderInstance, LoaderOptions, LoaderTarget } from '@stackline/loading';
 
 export type ReactLoadingOptions = LoaderOptions;
 

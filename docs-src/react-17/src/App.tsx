@@ -3,13 +3,13 @@ import {
   Loading,
   LoadingOverlay,
   useLoadingController
-} from '@revivejs/react-loading';
+} from '@stackline/react-loading';
 import { PlaygroundSection } from './PlaygroundSection';
 
-const INSTALL_CODE = 'npm install @revivejs/react-loading';
-const COMPONENT_CODE = `import { Loading } from '@revivejs/react-loading';\n\nexport function LoadingPreview() {\n  return (\n    <Loading\n      visible\n      options={{\n        variant: 'orbit',\n        size: 56,\n        centered: true,\n        label: 'Loading dashboard'\n      }}\n      style={{ minHeight: 180 }}\n    />\n  );\n}`;
-const OVERLAY_CODE = `import { LoadingOverlay } from '@revivejs/react-loading';\n\nexport function RevenueCard({ isLoading }: { isLoading: boolean }) {\n  return (\n    <LoadingOverlay\n      visible={isLoading}\n      options={{\n        overlay: true,\n        centered: true,\n        variant: 'glass-spinner',\n        label: 'Loading revenue card'\n      }}\n    >\n      <section className="card-shell">...</section>\n    </LoadingOverlay>\n  );\n}`;
-const HOOK_CODE = `import { useLoadingController } from '@revivejs/react-loading';\n\nexport function WorkspaceAction() {\n  const loading = useLoadingController();\n\n  async function showLoader() {\n    const instance = await loading.show(document.body, {\n      fullscreen: true,\n      overlay: true,\n      centered: true,\n      variant: 'galaxy',\n      label: 'Loading workspace'\n    });\n\n    window.setTimeout(() => {\n      void instance.hide();\n    }, 1200);\n  }\n\n  return <button onClick={showLoader}>Show fullscreen loader</button>;\n}`;
+const INSTALL_CODE = 'npm install @stackline/react-loading@17';
+const COMPONENT_CODE = `import { Loading } from '@stackline/react-loading';\n\nexport function LoadingPreview() {\n  return (\n    <Loading\n      visible\n      options={{\n        variant: 'orbit',\n        size: 56,\n        centered: true,\n        label: 'Loading dashboard'\n      }}\n      style={{ minHeight: 180 }}\n    />\n  );\n}`;
+const OVERLAY_CODE = `import { LoadingOverlay } from '@stackline/react-loading';\n\nexport function RevenueCard({ isLoading }: { isLoading: boolean }) {\n  return (\n    <LoadingOverlay\n      visible={isLoading}\n      options={{\n        overlay: true,\n        centered: true,\n        variant: 'glass-spinner',\n        label: 'Loading revenue card'\n      }}\n    >\n      <section className="card-shell">...</section>\n    </LoadingOverlay>\n  );\n}`;
+const HOOK_CODE = `import { useLoadingController } from '@stackline/react-loading';\n\nexport function WorkspaceAction() {\n  const loading = useLoadingController();\n\n  async function showLoader() {\n    const instance = await loading.show(document.body, {\n      fullscreen: true,\n      overlay: true,\n      centered: true,\n      variant: 'galaxy',\n      label: 'Loading workspace'\n    });\n\n    window.setTimeout(() => {\n      void instance.hide();\n    }, 1200);\n  }\n\n  return <button onClick={showLoader}>Show fullscreen loader</button>;\n}`;
 
 type AppProps = {
   reactLine: string;
@@ -135,9 +135,9 @@ export function App({ reactLine }: AppProps) {
       <header className="hero-grid">
         <section className="hero-card hero-main">
           <span className="badge">React {reactLine} · Loading wrapper</span>
-          <h1>@revivejs/react-loading</h1>
+          <h1>@stackline/react-loading</h1>
           <p>
-            Maintained React bindings for the ReviveJS loading toolkit. Keep the loading
+            Maintained React bindings for the Stackline loading toolkit. Keep the loading
             engine framework-agnostic, then add React-native ergonomics for declarative
             components, container overlays, and fullscreen programmatic states.
           </p>

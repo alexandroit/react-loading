@@ -1,7 +1,7 @@
 {
-  "name": "@revivejs/react-loading",
+  "name": "@stackline/react-loading",
   "version": "19.0.1",
-  "description": "Versioned React wrapper components, overlay helpers, and imperative hooks for @revivejs/loading.",
+  "description": "Versioned React wrapper components, overlay helpers, and imperative hooks for @stackline/loading.",
   "keywords": [
     "react",
     "react 17",
@@ -84,11 +84,11 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "react": ">=17.0.0 <20.0.0",
-    "react-dom": ">=17.0.0 <20.0.0"
+    "react": ">=19.0.0 <20.0.0",
+    "react-dom": ">=19.0.0 <20.0.0"
   },
   "dependencies": {
-    "@revivejs/loading": "^0.1.1"
+    "@stackline/loading": "^0.1.1"
   },
   "devDependencies": {
     "@types/react": "19.2.14",

@@ -4,9 +4,10 @@ import path from 'node:path';
 import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
-const packageName = '@revivejs/react-loading';
+const packageName = '@stackline/react-loading';
 
 const releaseLines = {
   17: {
@@ -112,6 +113,39 @@ export function releaseReactLine(line, options = { publish: true }) {
     run('npm publish', bundle.tempDir);
     console.log(`Published ${packageName}@${release.version}.`);
   }
+}
+
+function parseCli(argv) {
+  let line;
+  const flags = new Set();
+
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+
+    if (arg === '--line') {
+      line = Number(argv[index + 1]);
+      index += 1;
+      continue;
+    }
+
+    flags.add(arg);
+  }
+
+  if (!line) {
+    throw new Error('Usage: node scripts/release-react-line.js --line <17|18|19> [--no-publish]');
+  }
+
+  return {
+    line,
+    options: {
+      publish: !flags.has('--no-publish')
+    }
+  };
+}
+
+if (path.resolve(process.argv[1] || '') === __filename) {
+  const { line, options } = parseCli(process.argv.slice(2));
+  releaseReactLine(line, options);
 }
 
 export { releaseLines };

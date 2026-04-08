@@ -42,7 +42,7 @@ module.exports = __toCommonJS(index_exports);
 
 // src/Loading.tsx
 var import_react2 = require("react");
-var import_loading = require("@revivejs/loading");
+var import_loading = require("@stackline/loading");
 
 // src/useIsomorphicLayoutEffect.ts
 var import_react = require("react");
@@ -147,7 +147,7 @@ var Loading = (0, import_react2.forwardRef)(function Loading2({
 
 // src/LoadingOverlay.tsx
 var import_react3 = require("react");
-var import_loading2 = require("@revivejs/loading");
+var import_loading2 = require("@stackline/loading");
 var import_jsx_runtime2 = require("react/jsx-runtime");
 function ensureOverlayLoader(hostRef, options, instanceRef) {
   if (!hostRef.current) {
@@ -263,7 +263,7 @@ var LoadingOverlay = (0, import_react3.forwardRef)(
 
 // src/useLoadingController.ts
 var import_react4 = require("react");
-var import_loading3 = require("@revivejs/loading");
+var import_loading3 = require("@stackline/loading");
 function mergeOptions(baseOptions, target, nextOptions) {
   const mergedOptions = {
     ...baseOptions,
@@ -340,7 +340,7 @@ function useLoadingController(defaultOptions = {}) {
 var useLoading = useLoadingController;
 
 // src/index.ts
-var import_loading4 = require("@revivejs/loading");
+var import_loading4 = require("@stackline/loading");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Loading,

@@ -1,7 +1,7 @@
 import * as react from 'react';
 import { HTMLAttributes, ReactNode } from 'react';
-import { LoaderInstance, LoaderOptions, LoaderTarget } from '@revivejs/loading';
-export { LoaderAriaLive, LoaderCategory, LoaderDirection, LoaderInstance, LoaderOptions, LoaderState, LoaderTarget, LoaderThemeTokens, LoaderVariant, ResolvedLoaderOptions, StyleObject, VariantDefinition, applyThemeTokens, createLoader, darkTheme, defaultLoaderOptions, getLoaderStyles, getVariantDefinition, getVariantStyles, hideLoader, hydrateLoaders, lightTheme, loaderVariants, mountLoader, showLoader } from '@revivejs/loading';
+import { LoaderInstance, LoaderOptions, LoaderTarget } from '@stackline/loading';
+export { LoaderAriaLive, LoaderCategory, LoaderDirection, LoaderInstance, LoaderOptions, LoaderState, LoaderTarget, LoaderThemeTokens, LoaderVariant, ResolvedLoaderOptions, StyleObject, VariantDefinition, applyThemeTokens, createLoader, darkTheme, defaultLoaderOptions, getLoaderStyles, getVariantDefinition, getVariantStyles, hideLoader, hydrateLoaders, lightTheme, loaderVariants, mountLoader, showLoader } from '@stackline/loading';
 
 type ReactLoadingOptions = LoaderOptions;
 interface LoadingLifecycleCallbacks {

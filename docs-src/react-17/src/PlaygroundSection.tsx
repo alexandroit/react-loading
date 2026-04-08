@@ -4,7 +4,7 @@ import {
   LoadingOverlay,
   loaderVariants,
   type ReactLoadingOptions
-} from '@revivejs/react-loading';
+} from '@stackline/react-loading';
 
 type PlaygroundVariant = {
   value: string;
@@ -247,7 +247,7 @@ function buildSurfaceMarkup(surface: string) {
 function buildGeneratedCode(state: PlaygroundState, surface: string) {
   if (state.fullscreen) {
     return [
-      "import { useLoadingController } from '@revivejs/react-loading';",
+      "import { useLoadingController } from '@stackline/react-loading';",
       '',
       'export function WorkspaceAction() {',
       '  const loading = useLoadingController();',
@@ -266,7 +266,7 @@ function buildGeneratedCode(state: PlaygroundState, surface: string) {
 
   if (surface === 'default' && !state.overlay) {
     return [
-      "import { Loading } from '@revivejs/react-loading';",
+      "import { Loading } from '@stackline/react-loading';",
       '',
       'export function LoadingPreview() {',
       '  return (',
@@ -281,7 +281,7 @@ function buildGeneratedCode(state: PlaygroundState, surface: string) {
   }
 
   return [
-    "import { LoadingOverlay } from '@revivejs/react-loading';",
+    "import { LoadingOverlay } from '@stackline/react-loading';",
     '',
     'export function LoadingSurface() {',
     '  return (',
