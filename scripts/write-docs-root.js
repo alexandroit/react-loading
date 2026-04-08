@@ -5,6 +5,18 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
 const docsDir = path.join(rootDir, 'docs');
+const headTrackingSnippet = [
+  '    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6353624842390947" crossorigin="anonymous"></script>',
+  '    <!-- Google tag (gtag.js) -->',
+  '    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KQ9KECXR9"></script>',
+  '    <script>',
+  '      window.dataLayer = window.dataLayer || [];',
+  '      function gtag(){dataLayer.push(arguments);}',
+  "      gtag('js', new Date());",
+  '',
+  "      gtag('config', 'G-3KQ9KECXR9');",
+  '    </script>'
+];
 const releaseLines = [
   { id: 'react-17', label: 'React 17', version: '17.0.0', runtime: '17.0.2' },
   { id: 'react-18', label: 'React 18', version: '18.0.0', runtime: '18.3.1' },
@@ -94,6 +106,7 @@ fs.writeFileSync(
     '        .line-head { flex-direction: column; align-items: flex-start; }',
     '      }',
     '    </style>',
+    ...headTrackingSnippet,
     '  </head>',
     '  <body>',
     '    <main>',
