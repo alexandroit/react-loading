@@ -69,7 +69,7 @@ function createReleasePackage(line) {
     throw new Error(`Unsupported React release line: ${line}`);
   }
 
-  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), `revivejs-react-loading-${release.version}-`));
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), `stackline-react-loading-${release.version}-`));
   const packageJson = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'));
 
   copyDir(path.join(rootDir, 'dist'), path.join(tempDir, 'dist'));

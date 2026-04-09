@@ -36,8 +36,7 @@
     "inline-loader",
     "progress-ui",
     "tree-shakeable",
-    "typescript",
-    "revivejs"
+    "typescript"
   ],
   "homepage": "https://alexandroit.github.io/react-loading/",
   "bugs": {

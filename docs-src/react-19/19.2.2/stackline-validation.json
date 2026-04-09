@@ -3,8 +3,8 @@
   "projectRoot": "react-loading/react-loading",
   "family": "react-19",
   "framework": "react",
-  "exactVersion": "19.0.0",
-  "releaseRoot": "react-loading/react-loading/docs-src/react-19/19.0.0",
+  "exactVersion": "19.2.2",
+  "releaseRoot": "react-loading/react-loading/docs-src/react-19/19.2.2",
   "build": null,
   "install": {
     "success": true,
@@ -15,5 +15,5 @@
     "command": "npm run validate"
   },
   "success": true,
-  "generatedAt": "2026-04-09T01:51:54.716Z"
+  "generatedAt": "2026-04-09T01:52:08.551Z"
 }
