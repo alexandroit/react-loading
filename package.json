@@ -80,7 +80,8 @@
     "build:docs": "npm run build:docs:react-17 && npm run build:docs:react-18 && npm run build:docs:react-19 && npm run docs:root",
     "release:line": "node scripts/release-react-line.js",
     "release:sequence": "node scripts/release-react-sequence.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.cjs"
   },
   "peerDependencies": {
     "react": ">=19.0.0 <20.0.0",

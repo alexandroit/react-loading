@@ -5,7 +5,7 @@
     "noEmit": true,
     "types": ["vite/client"],
     "paths": {
-      "@stackline/react-infinity-charts": ["../../src/index.ts"]
+      "@stackline/react-loading": ["../../src/index.ts"]
     }
   },
   "include": ["src", "vite.config.ts"]
