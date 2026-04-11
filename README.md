@@ -10,7 +10,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![GitHub stars](https://img.shields.io/github/stars/alexandroit/react-loading.svg?style=flat-square)](https://github.com/alexandroit/react-loading/stargazers)
 
-**[Documentation & Live Demos](https://alexandroit.github.io/react-loading/)** | **[npm](https://www.npmjs.com/package/@stackline/react-loading)** | **[Issues](https://github.com/alexandroit/react-loading/issues)** | **[Repository](https://github.com/alexandroit/react-loading)**
+**[Documentation & Live Demos](https://alexandro.net/docs/react/react-loading/)** | **[npm](https://www.npmjs.com/package/@stackline/react-loading)** | **[Issues](https://github.com/alexandroit/react-loading/issues)** | **[Repository](https://github.com/alexandroit/react-loading)**
 
 **Latest version:** `19.0.0`
 
@@ -67,9 +67,9 @@ Each package family only installs on its matching React family. Framework major 
 
 | Package family | Framework family | Peer range | Tested release window | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **19.x** | **React 19 only** | **`>=19.0.0 <20.0.0`** | **19.0.0 -> 19.2.5** | [React 19 family docs](https://alexandroit.github.io/react-loading/react-19/) |
-| **18.x** | **React 18 only** | **`>=18.0.0 <19.0.0`** | **18.0.0 -> 18.3.1** | [React 18 family docs](https://alexandroit.github.io/react-loading/react-18/) |
-| **17.x** | **React 17 only** | **`>=17.0.0 <18.0.0`** | **17.0.0 -> 17.0.2** | [React 17 family docs](https://alexandroit.github.io/react-loading/react-17/) |
+| **19.x** | **React 19 only** | **`>=19.0.0 <20.0.0`** | **19.0.0 -> 19.2.5** | [React 19 family docs](https://alexandro.net/docs/react/react-loading/react-19/) |
+| **18.x** | **React 18 only** | **`>=18.0.0 <19.0.0`** | **18.0.0 -> 18.3.1** | [React 18 family docs](https://alexandro.net/docs/react/react-loading/react-18/) |
+| **17.x** | **React 17 only** | **`>=17.0.0 <18.0.0`** | **17.0.0 -> 17.0.2** | [React 17 family docs](https://alexandro.net/docs/react/react-loading/react-17/) |
 
 
 ## Installation
