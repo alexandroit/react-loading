@@ -15,7 +15,7 @@ export {
   loaderVariants,
   mountLoader,
   showLoader
-} from '@stackline/loading';
+} from '@stackline/loading-core';
 export type {
   LoaderAriaLive,
   LoaderCategory,
@@ -29,7 +29,7 @@ export type {
   ResolvedLoaderOptions,
   StyleObject,
   VariantDefinition
-} from '@stackline/loading';
+} from '@stackline/loading-core';
 export type {
   LoadingHandle,
   LoadingOverlayProps,

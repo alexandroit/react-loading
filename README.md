@@ -1,6 +1,6 @@
 # @stackline/react-loading
 
-> A maintained React wrapper for **@stackline/loading** with declarative components, container overlays, a fullscreen-ready hook, and versioned demos for React 17, 18, and 19.
+> A maintained React wrapper for **@stackline/loading-core** with declarative components, container overlays, a fullscreen-ready hook, and versioned demos for React 17, 18, and 19.
 
 [![npm version](https://img.shields.io/npm/v/@stackline/react-loading.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/react-loading)
 [![npm downloads](https://img.shields.io/npm/dt/@stackline/react-loading.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/react-loading)
@@ -12,11 +12,11 @@
 
 **[Documentation & Live Demos](https://alexandro.net/docs/react/react-loading/)** | **[npm](https://www.npmjs.com/package/@stackline/react-loading)** | **[Issues](https://github.com/alexandroit/react-loading/issues)** | **[Repository](https://github.com/alexandroit/react-loading)**
 
-**Latest version:** `19.0.0`
+**Latest version:** `19.0.1`
 
 ---
 
-> **Built on top of:** [@stackline/loading](https://www.npmjs.com/package/@stackline/loading), the framework-agnostic Stackline loading toolkit with modern variants, delay and minimum visible duration handling, accessibility defaults, and themeable CSS variables.
+> **Built on top of:** [@stackline/loading-core](https://www.npmjs.com/package/@stackline/loading-core), the framework-agnostic Stackline loading toolkit with modern variants, delay and minimum visible duration handling, accessibility defaults, and themeable CSS variables.
 
 ---
 
@@ -32,7 +32,7 @@ It gives React teams three practical integration paths:
 
 The wrapper stays intentionally thin so the real behavior continues to live in the core package:
 
-- polished loading variants from `@stackline/loading`
+- polished loading variants from `@stackline/loading-core`
 - delay and `minVisible` anti-flicker behavior
 - inline, overlay, container, and fullscreen modes
 - accessibility defaults and optional labels
@@ -247,6 +247,11 @@ npm run docs:install:react-18
 npm run docs:install:react-19
 npm run build:docs
 ```
+
+## Security
+
+Report vulnerabilities privately by following [SECURITY.md](SECURITY.md). Do
+not disclose exploit details in a public issue.
 
 ## License
 

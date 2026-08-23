@@ -5,7 +5,7 @@ import {
   useRef,
   type MutableRefObject
 } from 'react';
-import { createLoader, type LoaderInstance } from '@stackline/loading';
+import { createLoader, type LoaderInstance } from '@stackline/loading-core';
 
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 import type {

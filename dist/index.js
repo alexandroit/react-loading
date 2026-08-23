@@ -5,7 +5,7 @@ import {
   useImperativeHandle,
   useRef
 } from "react";
-import { createLoader } from "@stackline/loading";
+import { createLoader } from "@stackline/loading-core";
 
 // src/useIsomorphicLayoutEffect.ts
 import { useEffect, useLayoutEffect } from "react";
@@ -115,7 +115,7 @@ import {
   useImperativeHandle as useImperativeHandle2,
   useRef as useRef2
 } from "react";
-import { createLoader as createLoader2 } from "@stackline/loading";
+import { createLoader as createLoader2 } from "@stackline/loading-core";
 import { jsx as jsx2 } from "react/jsx-runtime";
 function ensureOverlayLoader(hostRef, options, instanceRef) {
   if (!hostRef.current) {
@@ -231,7 +231,7 @@ var LoadingOverlay = forwardRef2(
 
 // src/useLoadingController.ts
 import { useEffect as useEffect4, useRef as useRef3 } from "react";
-import { createLoader as createLoader3 } from "@stackline/loading";
+import { createLoader as createLoader3 } from "@stackline/loading-core";
 function mergeOptions(baseOptions, target, nextOptions) {
   const mergedOptions = {
     ...baseOptions,
@@ -322,7 +322,7 @@ import {
   loaderVariants,
   mountLoader,
   showLoader
-} from "@stackline/loading";
+} from "@stackline/loading-core";
 export {
   Loading,
   LoadingOverlay,
@@ -342,3 +342,4 @@ export {
   useLoading,
   useLoadingController
 };
+//# sourceMappingURL=index.js.map

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { createLoader, type LoaderInstance, type LoaderTarget } from '@stackline/loading';
+import { createLoader, type LoaderInstance, type LoaderTarget } from '@stackline/loading-core';
 
 import type {
   ReactLoadingOptions,

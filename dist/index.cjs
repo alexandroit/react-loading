@@ -22,19 +22,19 @@ var index_exports = {};
 __export(index_exports, {
   Loading: () => Loading,
   LoadingOverlay: () => LoadingOverlay,
-  applyThemeTokens: () => import_loading4.applyThemeTokens,
-  createLoader: () => import_loading4.createLoader,
-  darkTheme: () => import_loading4.darkTheme,
-  defaultLoaderOptions: () => import_loading4.defaultLoaderOptions,
-  getLoaderStyles: () => import_loading4.getLoaderStyles,
-  getVariantDefinition: () => import_loading4.getVariantDefinition,
-  getVariantStyles: () => import_loading4.getVariantStyles,
-  hideLoader: () => import_loading4.hideLoader,
-  hydrateLoaders: () => import_loading4.hydrateLoaders,
-  lightTheme: () => import_loading4.lightTheme,
-  loaderVariants: () => import_loading4.loaderVariants,
-  mountLoader: () => import_loading4.mountLoader,
-  showLoader: () => import_loading4.showLoader,
+  applyThemeTokens: () => import_loading_core4.applyThemeTokens,
+  createLoader: () => import_loading_core4.createLoader,
+  darkTheme: () => import_loading_core4.darkTheme,
+  defaultLoaderOptions: () => import_loading_core4.defaultLoaderOptions,
+  getLoaderStyles: () => import_loading_core4.getLoaderStyles,
+  getVariantDefinition: () => import_loading_core4.getVariantDefinition,
+  getVariantStyles: () => import_loading_core4.getVariantStyles,
+  hideLoader: () => import_loading_core4.hideLoader,
+  hydrateLoaders: () => import_loading_core4.hydrateLoaders,
+  lightTheme: () => import_loading_core4.lightTheme,
+  loaderVariants: () => import_loading_core4.loaderVariants,
+  mountLoader: () => import_loading_core4.mountLoader,
+  showLoader: () => import_loading_core4.showLoader,
   useLoading: () => useLoading,
   useLoadingController: () => useLoadingController
 });
@@ -42,7 +42,7 @@ module.exports = __toCommonJS(index_exports);
 
 // src/Loading.tsx
 var import_react2 = require("react");
-var import_loading = require("@stackline/loading");
+var import_loading_core = require("@stackline/loading-core");
 
 // src/useIsomorphicLayoutEffect.ts
 var import_react = require("react");
@@ -55,7 +55,7 @@ function createManagedLoader(hostRef, options, instanceRef) {
     return null;
   }
   if (!instanceRef.current) {
-    instanceRef.current = (0, import_loading.createLoader)({
+    instanceRef.current = (0, import_loading_core.createLoader)({
       ...options,
       target: hostRef.current,
       visible: false
@@ -147,7 +147,7 @@ var Loading = (0, import_react2.forwardRef)(function Loading2({
 
 // src/LoadingOverlay.tsx
 var import_react3 = require("react");
-var import_loading2 = require("@stackline/loading");
+var import_loading_core2 = require("@stackline/loading-core");
 var import_jsx_runtime2 = require("react/jsx-runtime");
 function ensureOverlayLoader(hostRef, options, instanceRef) {
   if (!hostRef.current) {
@@ -160,7 +160,7 @@ function ensureOverlayLoader(hostRef, options, instanceRef) {
     target: hostRef.current
   };
   if (!instanceRef.current) {
-    instanceRef.current = (0, import_loading2.createLoader)({
+    instanceRef.current = (0, import_loading_core2.createLoader)({
       ...mergedOptions,
       visible: false
     });
@@ -263,7 +263,7 @@ var LoadingOverlay = (0, import_react3.forwardRef)(
 
 // src/useLoadingController.ts
 var import_react4 = require("react");
-var import_loading3 = require("@stackline/loading");
+var import_loading_core3 = require("@stackline/loading-core");
 function mergeOptions(baseOptions, target, nextOptions) {
   const mergedOptions = {
     ...baseOptions,
@@ -289,7 +289,7 @@ function useLoadingController(defaultOptions = {}) {
   function ensureInstance(target, nextOptions) {
     const mergedOptions = mergeOptions(defaultOptionsRef.current, target, nextOptions);
     if (!instanceRef.current) {
-      instanceRef.current = (0, import_loading3.createLoader)({
+      instanceRef.current = (0, import_loading_core3.createLoader)({
         ...mergedOptions,
         visible: false
       });
@@ -340,7 +340,7 @@ function useLoadingController(defaultOptions = {}) {
 var useLoading = useLoadingController;
 
 // src/index.ts
-var import_loading4 = require("@stackline/loading");
+var import_loading_core4 = require("@stackline/loading-core");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Loading,
@@ -361,3 +361,4 @@ var import_loading4 = require("@stackline/loading");
   useLoading,
   useLoadingController
 });
+//# sourceMappingURL=index.cjs.map

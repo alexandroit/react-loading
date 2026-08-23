@@ -1,5 +1,5 @@
 import type { HTMLAttributes, ReactNode } from 'react';
-import type { LoaderInstance, LoaderOptions, LoaderTarget } from '@stackline/loading';
+import type { LoaderInstance, LoaderOptions, LoaderTarget } from '@stackline/loading-core';
 
 export type ReactLoadingOptions = LoaderOptions;
 
